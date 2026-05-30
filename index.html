@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mentoria Afiliado do Zero com Maiane Bastos. Aprenda a vender na internet do zero usando apenas o celular. Método prático, sem experiência necessária." />
+  <meta name="keywords" content="mentoria afiliado, marketing digital, vendas online, afiliado iniciante, Maiane Bastos, curso digital" />
+  <meta property="og:title" content="Mentoria Afiliado do Zero – Maiane Bastos" />
+  <meta property="og:description" content="Aprenda a fazer suas primeiras vendas online usando apenas o celular. Mesmo começando do zero." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#050505" />
+  <title>Mentoria Afiliado do Zero | Maiane Bastos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Canvas para partículas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Barra de urgência fixa no topo -->
+  <div class="urgency-bar" id="urgency-bar">
+    <div class="urgency-inner">
+      <span class="urgency-dot"></span>
+      <p>⚡ Vagas se encerrando — <strong>Garanta a sua agora!</strong></p>
+      <button class="urgency-close" id="urgency-close" aria-label="Fechar barra de urgência">✕</button>
+    </div>
+  </div>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
+    <div class="container">
+      <div class="hero-layout">
+
+        <!-- Coluna de texto -->
+        <div class="hero-content">
+
+          <!-- Badge -->
+          <div class="badge reveal-up" id="hero-badge">
+            <span class="badge-dot"></span>
+            🔥 VAGAS LIMITADAS
+          </div>
+
+          <!-- Título principal -->
+          <h1 class="hero-title reveal-up" id="hero-title">
+            Aprenda a Vender na Internet
+            <span class="gradient-text"> Mesmo Começando do Zero</span>
+          </h1>
+
+          <!-- Subtítulo -->
+          <p class="hero-subtitle reveal-up" id="hero-subtitle">
+            Descubra o método que está ajudando pessoas comuns a fazer suas
+            <strong>primeiras vendas online</strong> utilizando apenas o celular.
+          </p>
+
+          <!-- Lista de benefícios rápidos -->
+          <ul class="hero-bullets reveal-up" id="hero-bullets">
+            <li><span class="bullet-icon">✦</span> Sem experiência.</li>
+            <li><span class="bullet-icon">✦</span> Sem precisar aparecer.</li>
+            <li><span class="bullet-icon">✦</span> Sem investir fortunas.</li>
+            <li><span class="bullet-icon">✦</span> Mesmo que você nunca tenha vendido nada pela internet.</li>
+          </ul>
+
+          <!-- CTA principal -->
+          <div class="hero-cta reveal-up" id="hero-cta">
+            <a href="https://hotmart.com/product/mentoria-afiliado-do-zero" target="_blank" rel="noopener noreferrer" class="btn-primary" id="btn-hero">
+              <span class="btn-text">🚀 QUERO ENTRAR NA MENTORIA</span>
+              <span class="btn-shine"></span>
+            </a>
+            <ul class="cta-guarantees">
+              <li><span>✅</span> Acesso imediato</li>
+              <li><span>✅</span> Conteúdo atualizado</li>
+              <li><span>✅</span> Método para iniciantes</li>
+            </ul>
+          </div>
+
+          <!-- Contador de alunos -->
+          <div class="social-proof reveal-up" id="social-proof">
+            <div class="avatars">
+              <div class="avatar av1"></div>
+              <div class="avatar av2"></div>
+              <div class="avatar av3"></div>
+              <div class="avatar av4"></div>
+              <div class="avatar av5"></div>
+            </div>
+            <p><strong>+1.200 alunos</strong> já transformaram suas vidas</p>
+          </div>
+
+        </div>
+        <!-- /Coluna de texto -->
+
+        <!-- Coluna da imagem (maiane2 — com celular) -->
+        <div class="hero-image-col reveal-right" id="hero-image-col">
+          <div class="hero-img-frame">
+            <div class="hero-img-glow"></div>
+            <img
+              src="img/maiane2.webp"
+              alt="Maiane Bastos segurando o celular — aprenda a vender pela internet"
+              class="hero-img"
+              loading="eager"
+              decoding="async"
+            />
+            <!-- Tag flutuante sobre a foto -->
+            <div class="hero-img-tag">
+              <span>📱</span> Tudo pelo celular
+            </div>
+          </div>
+        </div>
+        <!-- /Coluna da imagem -->
+
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===================== VÍDEO DE APRESENTAÇÃO ===================== -->
+  <section class="video-section section-gap" id="video-apresentacao">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Assista Agora</span>
+        <h2 class="section-title">
+          Veja o que você vai
+          <span class="gradient-text">aprender</span>
+        </h2>
+        <p class="video-section-subtitle">Maiane conta tudo sobre a mentoria em menos de 1 minuto</p>
+      </div>
+
+      <div class="video-wrapper reveal-up" id="video-wrapper">
+        <!-- Glow decorativo -->
+        <div class="video-glow"></div>
+
+        <!-- Frame do vídeo -->
+        <div class="video-frame" id="video-frame">
+          <iframe
+            id="yt-player"
+            src="https://www.youtube.com/embed/uo_O3cs-RQ0?autoplay=1&mute=1&loop=1&playlist=uo_O3cs-RQ0&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&playsinline=1"
+            title="Vídeo de Apresentação — Mentoria Afiliado do Zero com Maiane Bastos"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <!-- Botão de áudio abaixo do vídeo -->
+        <div class="video-audio-bar">
+          <button class="audio-toggle-btn" id="audio-toggle-btn" aria-label="Ativar áudio do vídeo">
+            <span class="audio-icon" id="audio-icon">
+              <!-- Ícone mudo -->
+              <svg id="icon-muted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                <line x1="23" y1="9" x2="17" y2="15"/>
+                <line x1="17" y1="9" x2="23" y2="15"/>
+              </svg>
+              <!-- Ícone com som -->
+              <svg id="icon-sound" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+              </svg>
+            </span>
+            <span class="audio-label" id="audio-label">Toque para ativar o áudio</span>
+            <span class="audio-pulse"></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== IDENTIFICAÇÃO ===================== -->
+  <section class="identification section-gap" id="identification">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Para quem é isso?</span>
+        <h2 class="section-title">
+          Você se identifica com<br/>
+          <span class="gradient-text">alguma dessas situações?</span>
+        </h2>
+      </div>
+
+      <div class="id-grid">
+        <div class="id-card reveal-card" id="id-card-1">
+          <div class="id-icon">😕</div>
+          <p>Não sabe por onde começar</p>
+        </div>
+        <div class="id-card reveal-card" id="id-card-2">
+          <div class="id-icon">😞</div>
+          <p>Já tentou vender e não conseguiu</p>
+        </div>
+        <div class="id-card reveal-card" id="id-card-3">
+          <div class="id-icon">😳</div>
+          <p>Tem vergonha de divulgar</p>
+        </div>
+        <div class="id-card reveal-card" id="id-card-4">
+          <div class="id-icon">📱</div>
+          <p>Não entende TikTok ou Instagram</p>
+        </div>
+        <div class="id-card reveal-card" id="id-card-5">
+          <div class="id-icon">💸</div>
+          <p>Acredita que precisa investir dinheiro</p>
+        </div>
+        <div class="id-card reveal-card" id="id-card-6">
+          <div class="id-icon">😤</div>
+          <p>Está cansado de ver outras pessoas conseguindo resultados</p>
+        </div>
+      </div>
+
+      <div class="id-conclusion reveal-up">
+        <div class="conclusion-line"></div>
+        <p>Então essa mentoria foi criada <strong>exatamente para você.</strong></p>
+        <div class="conclusion-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRANSFORMAÇÃO ===================== -->
+  <section class="transformation section-gap" id="transformation">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Sua Jornada</span>
+        <h2 class="section-title">
+          De onde você está →
+          <span class="gradient-text">Para onde você pode chegar</span>
+        </h2>
+      </div>
+
+      <div class="transform-grid">
+        <!-- Coluna HOJE -->
+        <div class="transform-card transform-before reveal-left" id="transform-before">
+          <div class="transform-header">
+            <div class="transform-label before-label">HOJE</div>
+          </div>
+          <ul class="transform-list">
+            <li><span class="transform-icon bad">❌</span> Sem estratégia</li>
+            <li><span class="transform-icon bad">❌</span> Sem direção</li>
+            <li><span class="transform-icon bad">❌</span> Sem vendas</li>
+            <li><span class="transform-icon bad">❌</span> Sem confiança</li>
+          </ul>
+        </div>
+
+        <!-- Seta de transformação -->
+        <div class="transform-arrow reveal-up" id="transform-arrow">
+          <div class="arrow-glow"></div>
+          <div class="arrow-icon">→</div>
+          <span>TRANSFORMAÇÃO</span>
+        </div>
+
+        <!-- Coluna APÓS -->
+        <div class="transform-card transform-after reveal-right" id="transform-after">
+          <div class="transform-header">
+            <div class="transform-label after-label">APÓS A MENTORIA</div>
+          </div>
+          <ul class="transform-list">
+            <li><span class="transform-icon good">✅</span> Sabendo exatamente o que fazer</li>
+            <li><span class="transform-icon good">✅</span> Aplicando estratégias que funcionam</li>
+            <li><span class="transform-icon good">✅</span> Fazendo suas primeiras vendas</li>
+            <li><span class="transform-icon good">✅</span> Construindo uma renda online</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE A MENTORIA ===================== -->
+  <section class="about-mentoria section-gap" id="about-mentoria">
+    <div class="container">
+      <div class="about-mentoria-inner reveal-up">
+        <div class="section-tag-center">
+          <span class="section-tag">A Solução</span>
+        </div>
+        <h2 class="section-title center">
+          <span class="gradient-text">Mentoria Afiliado do Zero</span>
+        </h2>
+        <p class="about-text">
+          Uma mentoria <strong>AO VIVO</strong> criada para pessoas que querem aprender a vender pela internet
+          mesmo começando do absoluto zero.
+        </p>
+        <p class="about-text">
+          Você aprenderá exatamente quais passos seguir para sair da estagnação e iniciar sua jornada
+          como afiliado digital.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== O QUE VOCÊ VAI APRENDER ===================== -->
+  <section class="curriculum section-gap" id="curriculum">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Conteúdo</span>
+        <h2 class="section-title">
+          O que você vai
+          <span class="gradient-text">aprender</span>
+        </h2>
+      </div>
+
+      <div class="curriculum-grid">
+
+        <div class="curriculum-card reveal-card" id="curr-card-1">
+          <div class="curr-number">01</div>
+          <div class="curr-icon">🎯</div>
+          <h3>Como escolher produtos que realmente vendem</h3>
+          <p>Aprenda a identificar oportunidades e evitar perder tempo com produtos errados.</p>
+          <div class="card-glow-line"></div>
+        </div>
+
+        <div class="curriculum-card reveal-card" id="curr-card-2">
+          <div class="curr-number">02</div>
+          <div class="curr-icon">📲</div>
+          <h3>Como divulgar no TikTok e Instagram</h3>
+          <p>Estratégias práticas para gerar alcance e atrair compradores.</p>
+          <div class="card-glow-line"></div>
+        </div>
+
+        <div class="curriculum-card reveal-card" id="curr-card-3">
+          <div class="curr-number">03</div>
+          <div class="curr-icon">🎬</div>
+          <h3>Como criar vídeos que geram visualizações</h3>
+          <p>Métodos simples para produzir conteúdo mesmo sem experiência.</p>
+          <div class="card-glow-line"></div>
+        </div>
+
+        <div class="curriculum-card reveal-card" id="curr-card-4">
+          <div class="curr-number">04</div>
+          <div class="curr-icon">💪</div>
+          <h3>Como perder a vergonha de vender</h3>
+          <p>Técnicas para desenvolver confiança e comunicação.</p>
+          <div class="card-glow-line"></div>
+        </div>
+
+        <div class="curriculum-card reveal-card" id="curr-card-5">
+          <div class="curr-number">05</div>
+          <div class="curr-icon">🧠</div>
+          <h3>Como utilizar gatilhos mentais corretamente</h3>
+          <p>Venda de forma ética e natural.</p>
+          <div class="card-glow-line"></div>
+        </div>
+
+        <div class="curriculum-card reveal-card" id="curr-card-6">
+          <div class="curr-number">06</div>
+          <div class="curr-icon">💥</div>
+          <h3>Como transformar visualizações em vendas</h3>
+          <p>Entenda como converter atenção em comissões.</p>
+          <div class="card-glow-line"></div>
+        </div>
+
+        <div class="curriculum-card reveal-card curriculum-card-full" id="curr-card-7">
+          <div class="curr-number">07</div>
+          <div class="curr-icon">🏆</div>
+          <h3>Como conquistar sua primeira comissão</h3>
+          <p>Passo a passo para alcançar seu primeiro resultado real.</p>
+          <div class="card-glow-line"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BENEFÍCIOS ===================== -->
+  <section class="benefits section-gap" id="benefits">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Diferenciais</span>
+        <h2 class="section-title">
+          O que torna essa mentoria
+          <span class="gradient-text">especial?</span>
+        </h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-item reveal-card" id="benefit-1">
+          <div class="benefit-emoji">📱</div>
+          <div class="benefit-content">
+            <h4>Tudo usando apenas o celular</h4>
+            <p>Sem precisar de equipamentos caros ou computador.</p>
+          </div>
+        </div>
+        <div class="benefit-item reveal-card" id="benefit-2">
+          <div class="benefit-emoji">🚀</div>
+          <div class="benefit-content">
+            <h4>Método simples para iniciantes</h4>
+            <p>Linguagem fácil, passo a passo claro.</p>
+          </div>
+        </div>
+        <div class="benefit-item reveal-card" id="benefit-3">
+          <div class="benefit-emoji">🎯</div>
+          <div class="benefit-content">
+            <h4>Estratégias práticas</h4>
+            <p>Sem teoria desnecessária. Só o que funciona.</p>
+          </div>
+        </div>
+        <div class="benefit-item reveal-card" id="benefit-4">
+          <div class="benefit-emoji">💡</div>
+          <div class="benefit-content">
+            <h4>Linguagem fácil de entender</h4>
+            <p>Explicações simples e diretas ao ponto.</p>
+          </div>
+        </div>
+        <div class="benefit-item reveal-card" id="benefit-5">
+          <div class="benefit-emoji">🔥</div>
+          <div class="benefit-content">
+            <h4>Conteúdo sempre atualizado</h4>
+            <p>Estratégias modernas que funcionam hoje.</p>
+          </div>
+        </div>
+        <div class="benefit-item reveal-card" id="benefit-6">
+          <div class="benefit-emoji">💰</div>
+          <div class="benefit-content">
+            <h4>Foco em gerar resultados reais</h4>
+            <p>O objetivo é você vender. Ponto.</p>
+          </div>
+        </div>
+        <div class="benefit-item reveal-card" id="benefit-7">
+          <div class="benefit-emoji">🎥</div>
+          <div class="benefit-content">
+            <h4>Encontros ao vivo</h4>
+            <p>Aprenda em tempo real, tire dúvidas na hora.</p>
+          </div>
+        </div>
+        <div class="benefit-item reveal-card" id="benefit-8">
+          <div class="benefit-emoji">🤝</div>
+          <div class="benefit-content">
+            <h4>Suporte e direcionamento</h4>
+            <p>Você não fica sozinho no processo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE MAIANE BASTOS ===================== -->
+  <section class="about-mentor section-gap" id="about-mentor">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Sua Mentora</span>
+        <h2 class="section-title">
+          Conheça <span class="gradient-text">Maiane Bastos</span>
+        </h2>
+      </div>
+
+      <div class="mentor-card reveal-up" id="mentor-card">
+        <div class="mentor-avatar-wrap">
+          <div class="mentor-avatar-ring"></div>
+          <div class="mentor-avatar">
+            <img
+              src="img/maiane1.webp"
+              alt="Maiane Bastos — Mentora de Marketing de Afiliados"
+              class="mentor-avatar-photo"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="mentor-badge-floating">✦ Mentora</div>
+        </div>
+        <div class="mentor-info">
+          <h3 class="mentor-name">Maiane Bastos</h3>
+          <p class="mentor-role">Especialista em Marketing de Afiliados</p>
+          <p class="mentor-bio">
+            Maiane Bastos dedica-se a ensinar pessoas comuns a iniciarem sua jornada
+            no marketing digital de forma simples, prática e acessível.
+          </p>
+          <p class="mentor-bio">
+            Seu método foi desenvolvido especialmente para quem deseja
+            <strong>começar do zero</strong> e construir uma fonte de renda
+            utilizando a internet.
+          </p>
+          <div class="mentor-stats">
+            <div class="mentor-stat">
+              <strong>+1.200</strong>
+              <span>Alunos</span>
+            </div>
+            <div class="mentor-stat-divider"></div>
+            <div class="mentor-stat">
+              <strong>100%</strong>
+              <span>Online</span>
+            </div>
+            <div class="mentor-stat-divider"></div>
+            <div class="mentor-stat">
+              <strong>AO VIVO</strong>
+              <span>Encontros</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OFERTA / CTA FINAL ===================== -->
+  <section class="offer section-gap" id="offer">
+    <div class="offer-orb offer-orb-1"></div>
+    <div class="offer-orb offer-orb-2"></div>
+
+    <div class="container">
+      <div class="offer-inner reveal-up" id="offer-inner">
+        <div class="offer-tag">
+          <span>🔥 OFERTA ESPECIAL</span>
+        </div>
+
+        <h2 class="offer-title">
+          🔥 GARANTA SUA VAGA <span class="gradient-text">AGORA</span>
+        </h2>
+
+        <p class="offer-desc">
+          Comece hoje mesmo sua jornada como afiliado digital e aprenda um método prático
+          para fazer suas <strong>primeiras vendas pela internet.</strong>
+        </p>
+
+        <!-- Vagas countdown -->
+        <div class="offer-urgency">
+          <div class="urgency-badge">
+            <span class="pulse-dot"></span>
+            Inscrições abertas — Vagas limitadas
+          </div>
+        </div>
+
+        <!-- Checklist rápido -->
+        <ul class="offer-checklist">
+          <li><span>✅</span> Acesso imediato após confirmação</li>
+          <li><span>✅</span> Encontros ao vivo com Maiane</li>
+          <li><span>✅</span> Suporte completo para iniciantes</li>
+          <li><span>✅</span> Método testado e aprovado</li>
+          <li><span>✅</span> Tudo pelo celular</li>
+        </ul>
+
+        <!-- Botão CTA gigante -->
+        <a href="https://hotmart.com/product/mentoria-afiliado-do-zero" target="_blank" rel="noopener noreferrer" class="btn-final" id="btn-final">
+          <span class="btn-text">🚀 QUERO COMEÇAR AGORA</span>
+          <span class="btn-shine"></span>
+          <span class="btn-arrow">→</span>
+        </a>
+
+        <p class="offer-security">
+          🔒 Compra 100% segura · Plataforma Hotmart · Suporte garantido
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">Maiane Bastos</span>
+          <p>Mentoria Afiliado do Zero</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://hotmart.com/product/mentoria-afiliado-do-zero" target="_blank" rel="noopener noreferrer">Garantir Vaga</a>
+        </div>
+      </div>
+
+      <!-- Parceria Avalanch -->
+      <div class="footer-partnership">
+        <div class="partnership-divider"></div>
+        <div class="partnership-content">
+          <span class="partnership-label">Maiane Bastos em parceria com</span>
+          <a href="https://www.instagram.com/avalanch_oficial" target="_blank" rel="noopener noreferrer" class="partnership-logo-link" aria-label="Avalanch no Instagram">
+            <img
+              src="img/avalanch.webp"
+              alt="Avalanch — Agência de Marketing Digital"
+              class="avalanch-logo"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://www.instagram.com/avalanch_oficial" target="_blank" rel="noopener noreferrer" class="partnership-instagram" id="avalanch-instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+            @avalanch_oficial
+          </a>
+        </div>
+        <div class="partnership-divider"></div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Maiane Bastos. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer">
+          Os resultados apresentados não são garantia de ganhos. Os resultados variam de acordo com o esforço de cada aluno.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FAB (Floating Action Button) -->
+  <a href="https://hotmart.com/product/mentoria-afiliado-do-zero" target="_blank" rel="noopener noreferrer" class="fab" id="fab" aria-label="Garantir vaga na mentoria">
+    🚀 GARANTIR VAGA
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
