@@ -8,17 +8,29 @@
   <meta property="og:title" content="Mentoria Afiliado do Zero – Maiane Bastos" />
   <meta property="og:description" content="Aprenda a fazer suas primeiras vendas online usando apenas o celular. Mesmo começando do zero." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#050505" />
+  <meta name="theme-color" content="#FFFFFF" />
   <title>Mentoria Afiliado do Zero | Maiane Bastos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Anti-FOUC: aplica tema salvo antes do render -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme') || 'light';
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
 </head>
 <body>
 
   <!-- Canvas para partículas -->
   <canvas id="particles-canvas"></canvas>
+
+  <!-- Botão de alternância de tema -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema claro/escuro">
+    <span class="theme-icon" id="theme-icon">🌙</span>
+  </button>
 
   <!-- Barra de urgência fixa no topo -->
   <div class="urgency-bar" id="urgency-bar">

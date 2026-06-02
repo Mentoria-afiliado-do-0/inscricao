@@ -15,8 +15,14 @@
   const ctx = canvas.getContext('2d');
   let W, H, particles, animFrame;
 
-  const COLORS = ['rgba(123,47,255,', 'rgba(255,79,216,', 'rgba(155,89,255,'];
-  const COUNT  = window.innerWidth < 600 ? 40 : 70;
+  const DARK_COLORS  = ['rgba(123,47,255,', 'rgba(255,79,216,', 'rgba(155,89,255,'];
+  const LIGHT_COLORS = ['rgba(238,77,45,',  'rgba(208,1,27,',   'rgba(255,107,61,'];
+  const COUNT = window.innerWidth < 600 ? 40 : 70;
+
+  function getColors() {
+    return document.documentElement.getAttribute('data-theme') === 'dark'
+      ? DARK_COLORS : LIGHT_COLORS;
+  }
 
   function resize() {
     W = canvas.width  = window.innerWidth;
@@ -24,7 +30,8 @@
   }
 
   function createParticle() {
-    const color = COLORS[Math.floor(Math.random() * COLORS.length)];
+    const COLORS = getColors();
+    const color  = COLORS[Math.floor(Math.random() * COLORS.length)];
     return {
       x:     Math.random() * W,
       y:     Math.random() * H,
@@ -62,6 +69,14 @@
 
   init();
   draw();
+
+  // Recolore partículas quando o tema muda
+  window.addEventListener('themechange', () => {
+    const COLORS = getColors();
+    particles.forEach(p => {
+      p.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+    });
+  });
 
   let resizeTimer;
   window.addEventListener('resize', () => {
@@ -229,12 +244,19 @@
 
   const glow = document.createElement('div');
   glow.id = 'cursor-glow';
+
+  function getGlowColor() {
+    return document.documentElement.getAttribute('data-theme') === 'dark'
+      ? 'radial-gradient(circle, rgba(123,47,255,0.06) 0%, transparent 70%)'
+      : 'radial-gradient(circle, rgba(238,77,45,0.05) 0%, transparent 70%)';
+  }
+
   Object.assign(glow.style, {
     position:     'fixed',
     width:        '300px',
     height:       '300px',
     borderRadius: '50%',
-    background:   'radial-gradient(circle, rgba(123,47,255,0.06) 0%, transparent 70%)',
+    background:   getGlowColor(),
     pointerEvents: 'none',
     zIndex:       '1',
     transform:    'translate(-50%, -50%)',
@@ -247,6 +269,10 @@
   window.addEventListener('mousemove', e => {
     glow.style.left = e.clientX + 'px';
     glow.style.top  = e.clientY + 'px';
+  });
+
+  window.addEventListener('themechange', () => {
+    glow.style.background = getGlowColor();
   });
 })();
 
@@ -385,5 +411,44 @@
       // window.dataLayer = window.dataLayer || [];
       // window.dataLayer.push({ event: 'cta_click', cta_id: id });
     });
+  });
+})();
+/* ─────────────────────────────────────────────
+   14. THEME TOGGLE
+   ───────────────────────────────────────────── */
+(function initThemeToggle() {
+  const btn      = document.getElementById('theme-toggle');
+  const icon     = document.getElementById('theme-icon');
+  const htmlEl   = document.documentElement;
+  const metaTheme = document.querySelector('meta[name="theme-color"]');
+
+  // Tema salvo ou padrão: claro
+  const saved = localStorage.getItem('theme') || 'light';
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      htmlEl.setAttribute('data-theme', 'dark');
+      icon.textContent = '☀️';   // Sol = trocar para claro
+      btn.setAttribute('aria-label', 'Ativar tema claro');
+      if (metaTheme) metaTheme.setAttribute('content', '#050505');
+    } else {
+      htmlEl.removeAttribute('data-theme');
+      icon.textContent = '🌙';  // Lua = trocar para escuro
+      btn.setAttribute('aria-label', 'Ativar tema escuro');
+      if (metaTheme) metaTheme.setAttribute('content', '#FFFFFF');
+    }
+    // Notifica as partículas para mudar cores
+    window.dispatchEvent(new Event('themechange'));
+  }
+
+  // Aplica o tema salvo ao carregar
+  applyTheme(saved);
+
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const current = htmlEl.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    const next    = current === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', next);
+    applyTheme(next);
   });
 })();
